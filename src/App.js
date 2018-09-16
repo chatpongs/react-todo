@@ -14,10 +14,15 @@ class App extends Component {
       ]
     }
   }
+  handleAddItem = (newItem) => {
+    let { items } = this.state;
+    items = [...items, newItem];
+    this.setState({ items });
+  }
   render() {
     return (
       <div className="container">
-        <TodoForm title="Add new item" />
+        <TodoForm title="Add new item" addItem={this.handleAddItem} />
         <TodoList items={this.state.items} />
       </div>
     );
