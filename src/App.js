@@ -8,14 +8,14 @@ class App extends Component {
         <div className="my-3">
           <form class="form-inline">
             <input className="form-control" type="text" value="" />
-            <button className="btn btn-default ml-2">Add</button>
+            <button className="btn btn-primary ml-2">Add</button>
           </form>
         </div>
         <div><h2>Todos</h2></div>
-        <div>Study React</div>
-        <div>Shopping</div>
-        <div>Play games</div>
-        <div>Sleep</div>
+        <div className="py-2"><button className="btn btn-danger btn-sm mr-2">DEL</button>Study React</div>
+        <div className="py-2"><button className="btn btn-danger btn-sm mr-2">DEL</button>Shopping</div>
+        <div className="py-2"><button className="btn btn-danger btn-sm mr-2">DEL</button>Play games </div>
+        <div className="py-2"><button className="btn btn-danger btn-sm mr-2">DEL</button>Sleep</div>
       </div>
     );
   }
