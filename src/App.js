@@ -6,12 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        'Study React',
-        'Shopping',
-        'Play games',
-        'Sleep'
-      ]
+      items: []
     }
   }
   handleAddItem = (newItem) => {
@@ -28,7 +23,9 @@ class App extends Component {
     return (
       <div className="container">
         <TodoForm title="Add new item" addItem={this.handleAddItem} />
-        <TodoList items={this.state.items} removeItem={this.handleRemoveItem} />
+        {
+          this.state.items.length > 0 ? <TodoList items={this.state.items} removeItem={this.handleRemoveItem} /> : <div>No Items</div>
+        }
       </div>
     );
   }
