@@ -19,11 +19,16 @@ class App extends Component {
     items = [...items, newItem];
     this.setState({ items });
   }
+  handleRemoveItem = (index) => {
+    let { items } = this.state;
+    items.splice(index, 1);
+    this.setState({ items });
+  }
   render() {
     return (
       <div className="container">
         <TodoForm title="Add new item" addItem={this.handleAddItem} />
-        <TodoList items={this.state.items} />
+        <TodoList items={this.state.items} removeItem={this.handleRemoveItem} />
       </div>
     );
   }

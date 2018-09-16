@@ -5,7 +5,7 @@ class TodoList extends React.Component {
     super(props);
   }
   handleClick = index => {
-    console.log(index);
+    this.props.removeItem(index);
   }
   render() {
     return (
